@@ -8,4 +8,4 @@ ENV INFLUXDB_USER root
 ENV INFLUXDB_PASS root
 ENV STATUS_INTERVAL 10
 
-CMD [ "python", "./sine.py" ]
+CMD [ "python", "-u", "./sine.py" ]
