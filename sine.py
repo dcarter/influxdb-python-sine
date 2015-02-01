@@ -14,7 +14,7 @@ INFLUX_DATABASE = os.getenv('INFLUXDB_ENV_PRE_CREATE_DB', 'test_db')
 INFLUX_USER = os.getenv('INFLUXDB_USER', 'root')
 INFLUX_PASS = os.getenv('INFLUXDB_PASS', 'root')
 
-STATUS_MOD = os.getenv('STATUS_INTERVAL' , 10)
+STATUS_MOD = int(os.getenv('STATUS_INTERVAL' , '10'))
 
 POST_URL = '%s://%s:%s/db/%s/series' % (INFLUX_PROTO, INFLUX_HOST, INFLUX_PORT, INFLUX_DATABASE)
 
