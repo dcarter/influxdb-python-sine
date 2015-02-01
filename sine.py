@@ -7,10 +7,10 @@ import sys
 from time import sleep
 import os
 
-INFLUX_PROTO = os.getenv('INFLUXDB_PROTO', 'http')
-INFLUX_HOST = os.getenv('INFLUXDB_HOST', 'localhost')
-INFLUX_PORT = os.getenv('INFLUXDB_PORT', '8086')
-INFLUX_DATABASE = os.getenv('INFLUXDB_NAME', 'test1')
+INFLUX_PROTO = os.getenv('INFLUXDB_PORT_8086_TCP_PROTO', 'http')
+INFLUX_HOST = os.getenv('INFLUXDB_PORT_8086_TCP_ADDR', 'localhost')
+INFLUX_PORT = os.getenv('INFLUXDB_PORT_8086_TCP_PORT', '8086')
+INFLUX_DATABASE = os.getenv('INFLUXDB_ENV_PRE_CREATE_DB', 'test_db')
 INFLUX_USER = os.getenv('INFLUXDB_USER', 'root')
 INFLUX_PASS = os.getenv('INFLUXDB_PASS', 'root')
 
