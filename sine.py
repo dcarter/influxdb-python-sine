@@ -25,7 +25,7 @@ print("POST_URL = %s" % POST_URL)
 n = 0
 while True:
     for d in range(0, 360):
-        v = [{'name': 'sin', 'columns': ['val'], 'points': [[math.sin(math.radians(d))]]}]
+        v = [{'name': 'sin', 'columns': ['value'], 'points': [[math.sin(math.radians(d))]]}]
         #print("%s" % json.dumps(v))
         r = requests.post(POST_URL, params=parameters, data=json.dumps(v))
         if r.status_code != 200:
